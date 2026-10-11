@@ -73,13 +73,13 @@
 ; Fields in classes, extensions, enums and mixins
 (declaration
   "static"? @context.extra
-  "covariant"? @_modifier
-  "late"? @_modifier
-  (final_builtin)? @_modifier
-  (const_builtin)? @_modifier
+  "covariant"? @context.extra
+  "late"? @context.extra
+  (final_builtin)? @context.extra
+  (const_builtin)? @context.extra
+  (inferred_type)? @context.extra
   [
     (type_identifier)
-    (inferred_type)
     (type_arguments)
     (nullable_type)
     (void_type)
@@ -93,13 +93,13 @@
 
 (declaration
   "static"? @context.extra
-  "covariant"? @_modifier
-  "late"? @_modifier
-  (final_builtin)? @_modifier
-  (const_builtin)? @_modifier
+  "covariant"? @context.extra
+  "late"? @context.extra
+  (final_builtin)? @context.extra
+  (const_builtin)? @context.extra
+  (inferred_type)? @context.extra
   [
     (type_identifier)
-    (inferred_type)
     (type_arguments)
     (nullable_type)
     (void_type)
