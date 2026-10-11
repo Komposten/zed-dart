@@ -70,6 +70,39 @@
     "set" @context
     name: (_) @name) @item)
 
+; Constructors
+(constructor_signature
+  name: (identifier) @name
+  "."? @context.extra
+  "new"? @context.extra
+  name: (identifier)? @name
+  parameters: (formal_parameter_list)) @item
+
+(constant_constructor_signature
+  (const_builtin) @context.extra
+  (identifier) @name
+  "."? @context.extra
+  "new"? @context.extra
+  (identifier)? @name
+  (formal_parameter_list)) @item
+
+(factory_constructor_signature
+  "factory" @context.extra
+  (identifier) @name
+  "."? @context.extra
+  "new"? @context.extra
+  (identifier)? @name
+  (formal_parameter_list)) @item
+
+(redirecting_factory_constructor_signature
+  (const_builtin)? @context.extra
+  "factory" @context.extra
+  (identifier) @name
+  "."? @context.extra
+  "new"? @context.extra
+  (identifier)? @name
+  (formal_parameter_list)) @item
+
 ; Fields in classes, extensions, enums and mixins
 (declaration
   "static"? @context.extra
