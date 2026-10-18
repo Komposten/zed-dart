@@ -122,7 +122,8 @@
   ]* @context.extra
   (initialized_identifier_list
     (initialized_identifier
-      . (identifier) @name) @item))
+      .
+      (identifier) @name) @item))
 
 (declaration
   "static"? @context.extra
@@ -142,18 +143,21 @@
   ]* @context.extra
   (static_final_declaration_list
     (static_final_declaration
-      . (identifier) @name) @item))
+      .
+      (identifier) @name) @item))
 
 ; Top-level variables
 (program
   (initialized_identifier_list
     (initialized_identifier
-      . (identifier) @name) @item))
+      .
+      (identifier) @name) @item))
 
 (program
   (static_final_declaration_list
     (static_final_declaration
-      . (identifier) @name) @item))
+      .
+      (identifier) @name) @item))
 
 (enum_declaration
   "enum" @context
